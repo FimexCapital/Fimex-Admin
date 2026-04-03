@@ -116,10 +116,10 @@ export default function DocumentosPage() {
         head: [["No.", "Saldo Inicial", "Pago Total", "Interés", "Capital", "Saldo Final"]],
         body: tableData,
         theme: "grid",
-        headStyles: { fillColor: navy, textColor: [255, 255, 255], fontStyle: "bold", fontSize: 7, halign: "right" },
-        bodyStyles: { fontSize: 7.5, textColor: navy, halign: "right" },
+        headStyles: { fillColor: [36, 47, 93] as [number, number, number], textColor: [255, 255, 255] as [number, number, number], fontStyle: "bold", fontSize: 7, halign: "right" },
+        bodyStyles: { fontSize: 7.5, textColor: [36, 47, 93] as [number, number, number], halign: "right" },
         columnStyles: { 0: { halign: "center", fontStyle: "bold" } },
-        alternateRowStyles: { fillColor: [244, 245, 250] },
+        alternateRowStyles: { fillColor: [244, 245, 250] as [number, number, number] },
         margin: { left: 14, right: 14 },
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         didParseCell: (data: any) => {
