@@ -34,8 +34,8 @@ export default function DocumentosPage() {
       });
 
       const doc = new jsPDF();
-      const navy = [36, 47, 93] as const;
-      const red = [200, 20, 47] as const;
+      const navy: [number, number, number] = [36, 47, 93];
+      const red: [number, number, number] = [200, 20, 47];
       const w = doc.internal.pageSize.getWidth();
 
       // Header bar
@@ -121,6 +121,7 @@ export default function DocumentosPage() {
         columnStyles: { 0: { halign: "center", fontStyle: "bold" } },
         alternateRowStyles: { fillColor: [244, 245, 250] },
         margin: { left: 14, right: 14 },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         didParseCell: (data: any) => {
           // Style totals row
           if (data.row.index === tableData.length - 1) {
@@ -228,5 +229,8 @@ export default function DocumentosPage() {
         </div>
       </div>
     </AdminLayout>
+  );
+}
+
   );
 }
